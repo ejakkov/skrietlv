@@ -1,0 +1,30 @@
+
+
+.item-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 8px 0;
+}
+
+p {
+  margin: 4px 0;
+  color: #555;
+}
