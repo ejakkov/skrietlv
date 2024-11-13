@@ -20,7 +20,10 @@
   .sidebar {
     background-color: #f5f5f5;
     padding: 20px;
-    width: 200px;
+    width: 100px;
+    margin-left: 30px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
   }
   
   .sidebar ul {
@@ -29,8 +32,7 @@
   }
   
   .sidebar li {
-    margin-bottom: 15px;
-    font-weight: bold;
+    margin-bottom: 20px;
     cursor: pointer;
   }
   </style>

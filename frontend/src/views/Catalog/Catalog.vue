@@ -1,7 +1,7 @@
 <template>
   <div>
+    <SubNavBar />
     <h1>Catalog</h1>
-
     <div v-if="loading">
       <p>Loading items...</p>
     </div>
@@ -16,6 +16,7 @@
       </div>
     </div>
   </div>
+  <Footer />
 </template>
 
 <script src="./Catalog.js"></script>

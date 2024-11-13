@@ -1,5 +1,6 @@
 <template>
     <div>
+      <SubNavBar/>
       <h1>Your Cart</h1>
       <div v-if="cartItems.length > 0">
         <div v-for="item in cartItems" :key="item._id" class="cart-item">
@@ -14,10 +15,18 @@
         <p>Your cart is empty.</p>
       </div>
     </div>
+    <Footer/>
   </template>
   
   <script>
+  import Footer from "../../components/Footer.vue";
+  import SubNavBar from "../../components/SubNavbar.vue";
+
   export default {
+    components: {
+    SubNavBar,
+    Footer,
+    },  
     data() {
       return {
         cartItems: [
