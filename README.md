@@ -4,5 +4,6 @@
 4. Backend mapē palaidiet 'node seeds/seedData.js'
 5. 'cd' atpakaļ uz skrietlv
 6. Palaidiet projektu ar 'npm run start-all'. Jābūt pieejamam šeit: http://localhost:8080/
-7. git checkout -b <vards-uzvards>
-8. Izstrādājiet savu risinājumu. Pēc izmaiņu veikšanas uztaisiet commit -> git push -> pull request uz main zaru.
+7. git checkout -b vards-uzvards
+8. Instalējiet front-end bibliotēku ar "npm install primevue @primevue/themes"
+9. Izstrādājiet savu risinājumu. Pēc izmaiņu veikšanas uztaisiet commit -> git push -> pull request uz main zaru.
