@@ -1,6 +1,7 @@
 <template>
-  <div class="catalog">
-    <h1>Category name</h1>
+  <div>
+    <SubNavBar />
+    <h1>Catalog</h1>
 
     <div v-if="loading">
       <p>Loading items...</p>
@@ -14,6 +15,7 @@
       </div>
     </div>
   </div>
+  <Footer />
 </template>
 
 <script src="./Catalog.js"></script>

@@ -1,6 +1,12 @@
 import axios from 'axios';
+import Footer from "../../components/Footer.vue";
+import SubNavBar from "@/components/SubNavbar.vue";
 
 export default {
+  components: {
+    SubNavBar,
+    Footer,
+  },
   data() {
     return {
       items: []
