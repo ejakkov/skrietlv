@@ -16,31 +16,6 @@
     </div>
   </template>
   
-  <script>
-  export default {
-    data() {
-      return {
-        cartItems: [
-          
-        ]
-      };
-    },
-    computed: {
-      cartTotal() {
-        return this.cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
-      }
-    },
-    methods: {
-      removeFromCart(id) {
-        this.cartItems = this.cartItems.filter(item => item._id !== id);
-      }
-    }
-  };
-  </script>
   
-  <style scoped>
-  .cart-item {
-    border-bottom: 1px solid #ddd;
-    padding: 8px 0;
-  }
-  </style>
+<script src="./Cart.js"></script>
+<style src="./Cart.css"></style>

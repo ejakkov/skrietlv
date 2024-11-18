@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
 
 const itemsRoute = require('./routes/items'); // Import the items route
+const cartItemsRoute = require('./routes/cartItems'); 
 
 
 // Middleware
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/items', itemsRoute);
+app.use('/api/cart', cartItemsRoute);
 
 // MongoDB Connection
 mongoose.connect(MONGO_URI, {

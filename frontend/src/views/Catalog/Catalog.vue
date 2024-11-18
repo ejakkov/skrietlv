@@ -12,6 +12,7 @@
         <h2>{{ item.name }}</h2>
         <p>{{ item.description }}</p>
         <p>Price: {{ item.price }}</p>
+        <button @click="addToCart(item)">Add to Cart</button>
         <router-link :to="{ name: 'Product', params: { id: item._id }}">View Product</router-link>
       </div>
     </div>

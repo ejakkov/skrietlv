@@ -12,6 +12,16 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Get item by id
+router.get('/:itemID', async (req, res) => {
+  try {
+    const item = await Item.findById({_id : req.params.itemID}); 
+    res.json(item);
+  } catch (error) {
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
 // Create item (admin only)
 router.post('/', async (req, res) => {
   const newItem = new Item(req.body);

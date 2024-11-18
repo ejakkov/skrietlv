@@ -4,7 +4,7 @@
       <img :src="product.imageUrl" alt="Product image" />
       <p>{{ product.description }}</p>
       <p>Price: {{ product.price }}</p>
-      <button @click="addToCart">Add to Cart</button>
+      <button @click="addToCart(product)">Add to Cart</button>
     </div>
     <div v-else>
       <p>Loading product details...</p>
@@ -29,8 +29,9 @@
       }
     },
     methods: {
-      addToCart() {
-        console.log(`${this.product.name} added to cart`);
+      addToCart(product) {
+
+        console.log(`${product.name} added to cart`);
       }
     }
   };
