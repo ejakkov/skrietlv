@@ -1,5 +1,29 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
+import PrimeVue from "primevue/config";
+import Button from "primevue/button";
+import Carousel from "primevue/carousel";
+import Noir from './presets/Noir.js';
 
-createApp(App).use(router).mount('#app');
+import 'primeicons/primeicons.css'; 
+
+const app = createApp(App);
+
+app.use(router);
+
+app.use(PrimeVue, {
+    theme: {
+        preset: Noir,
+        options: {
+            prefix: 'p',
+            darkModeSelector: '.p-dark',
+            cssLayer: false,
+        }
+    }
+});
+
+app.component("Button", Button);
+app.component("Carousel", Carousel);
+
+app.mount('#app');
