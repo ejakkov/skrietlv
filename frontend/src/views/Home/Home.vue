@@ -103,6 +103,16 @@
             </div>
           </div>
         </div>
+        <div class="banner">
+          <div class="slide">Content Slide 4</div>
+          <div class="slide">Content Slide 5</div>
+          <div class="slide">Content Slide 6</div>
+        </div>
+        <div class="banner">
+          <div class="slide">Content Slide 4</div>
+          <div class="slide">Content Slide 5</div>
+          <div class="slide">Content Slide 6</div>
+        </div>
       </div>
     </div>
     <Footer />

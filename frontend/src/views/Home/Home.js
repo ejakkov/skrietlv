@@ -3,6 +3,7 @@ import Footer from "@/components/Footer.vue";
 import Carousel from 'primevue/carousel';
 import axios from "axios";
 
+
 export default {
   components: {
     SubNavbar,
