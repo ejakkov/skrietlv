@@ -3,7 +3,7 @@
     <div class="navbar">
       <div class="navbar-content">
         <div class="nav-left"></div>
-        <span class="brand" @click="goToHome" > SKRIET </span>
+        <span class="brand" @click="goToHome"> SKRIET </span>
         <div class="nav-icons">
           <span>€</span>
           <span>EN</span>
@@ -57,15 +57,20 @@ export default {
       this.$router.push({ name: 'Profile' });
     },
     goToHome() {
-      if (this.$route.name === 'Home') {
-        // scroll to the top if already on the home page
+      if (window.scrollY === 0) {
+        if (this.$route.name === 'Home') {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          });
+        } else {
+          this.$router.push({ name: 'Home' });
+        }
+      } else {
         window.scrollTo({
           top: 0,
           behavior: 'smooth',
         });
-      } else {
-        // navigate to the home page if on a different route
-        this.$router.push({ name: 'Home' });
       }
     },
   },
@@ -86,11 +91,12 @@ export default {
   position: fixed;
   width: 100%;
   background-color: #a8d5a1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); 
   padding: 20px;
   margin-right: 0px;
   display: flex;
   justify-content: center;
-  z-index: 1000; /* ensure it stays above other elements */
+  z-index: 1000; 
   font-family: "Oswald", sans-serif;
   font-weight: 700;
 }
@@ -114,7 +120,9 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   transition: left 0.3s ease;
-  cursor: default; 
+  cursor: default;
+  outline: none;
+  user-select: none;
 }
 
 @media (max-width: 900px) {

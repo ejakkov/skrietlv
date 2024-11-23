@@ -48,6 +48,7 @@
     text-align: center;
     font-family: "Oswald", sans-serif;
     font-weight: 600;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
   }
   
   .footer-content {
@@ -66,6 +67,7 @@
     width: 300px;
     margin-bottom: 15px;
     font-size: 1.2em;
+    font-weight: 600;
   }
   
   .footer-section p {
@@ -95,10 +97,15 @@
   }
   
   .social-icons a {
-    color: #111010;
+    color: #111010; /* Icon color */
     margin: 0 10px;
-    font-size: 1.5em;
+    font-size: 1.6em; /* Adjust icon size here */
     text-decoration: none;
+    display: inline-block; /* Ensure proper layout */
+  }
+
+  .social-icons i {
+    font-size: inherit; /* Inherit the size from the parent <a> tag */
   }
   
   .footer-bottom {

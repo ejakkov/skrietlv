@@ -4,13 +4,15 @@ import Catalog from '../views/Catalog/Catalog.vue';
 import Product from '../views/Product/Product.vue';
 import Cart from '../views/Cart/Cart.vue';
 import Profile from '../views/Profile/Profile.vue';
+import Likes from '../views/Likes/Likes.vue';
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
   { path: '/catalog', name: 'Catalog', component: Catalog },
   { path: '/product/:id', name: 'Product', component: Product },
   { path: '/cart', name: 'Cart', component: Cart },
-  { path: '/profile', name: 'Profile', component: Profile }
+  { path: '/profile', name: 'Profile', component: Profile },
+  { path: '/likes', name: 'Likes', component: Likes }
 ];
 
 const router = createRouter({
