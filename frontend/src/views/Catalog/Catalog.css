@@ -68,3 +68,8 @@ p {
 .sort-button:hover {
   background-color: #0056b3;
 }
+
+.action-section {
+  display: flex;
+  gap: 30px;
+}

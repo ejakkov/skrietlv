@@ -2,16 +2,28 @@
   <div>
     <SubNavBar />
     <h1>Catalog</h1>
-
-    <!-- <div>
-      <label for="sort">Sort by: </label>
-      <select id="sort" v-model="sortOption">
-        <option value="asc">Price: Low to High</option>
-        <option value="desc">Price: High to Low</option>
-      </select>
-    </div> -->
-    <div class="card flex justify-content-center">
-      <Select v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" checkmark :highlightOnSelect="false" class="w-full md:w-56" />
+    <div class="card action-section">
+      <Select
+        v-model="sortOption"
+        :options="sorting"
+        optionLabel="name"
+        placeholder="Sort"
+        class="w-full md:w-56"
+      />
+      <Select
+        v-model="selectedCategory"
+        :options="categories"
+        optionLabel="name"
+        placeholder="Category"
+        class="w-full md:w-56"
+      />
+      <Select
+        v-model="selectedSize"
+        :options="sizes"
+        optionLabel="value"
+        placeholder="Size"
+        class="w-full md:w-56"
+      />
     </div>
     <div v-if="loading">
       <p>Loading items...</p>
