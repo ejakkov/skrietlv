@@ -1,13 +1,16 @@
 {
   "dependencies": {
+    "@primevue/themes": "^4.2.3",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.7.3"
+    "mongoose": "^8.7.3",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.2.3"
   },
   "scripts": {
-  "start-all": "concurrently \"cd backend && npm start\" \"cd frontend && npm run serve\""
+    "start-all": "concurrently \"cd backend && npm start\" \"cd frontend && npm run serve\""
   }
 }

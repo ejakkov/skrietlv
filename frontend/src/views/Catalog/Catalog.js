@@ -24,9 +24,14 @@ export default {
 
     async addToCart(item){
       try{
-        const itemToAdd = await axios.get(`http://localhost:5000/api/items/${item._id}`);
-        await axios.post('http://localhost:5000/api/cart',itemToAdd.data);
-        console.log(`${item._id} added to cart`);
+        const response = await axios.get(`http://localhost:5000/api/cart/${item._id}`);
+        if(!response.data){
+          await axios.post('http://localhost:5000/api/cart',{_id: item._id, quantity: 1});
+          console.log(`${item._id} added to cart`);
+        }else{
+          console.log(`Item ${item._id} already in cart!`);
+        }
+
       }catch(error){
         console.error('Error adding item:', error);
       }
