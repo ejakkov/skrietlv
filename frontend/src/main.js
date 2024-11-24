@@ -3,7 +3,6 @@ import App from './App.vue';
 import router from './router';
 import PrimeVue from "primevue/config";
 import Button from "primevue/button";
-import Carousel from "primevue/carousel";
 import Noir from './presets/Noir.js';
 
 import 'primeicons/primeicons.css'; 
@@ -24,6 +23,5 @@ app.use(PrimeVue, {
 });
 
 app.component("Button", Button);
-app.component("Carousel", Carousel);
 
 app.mount('#app');

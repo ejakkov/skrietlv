@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@primevue/themes": "^4.2.1",
+    "@primevue/themes": "^4.2.3",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
@@ -14,9 +14,6 @@
   },
   "devDependencies": {
     "concurrently": "^9.0.1",
-    "primevue": "^4.2.1"
-  },
-  "scripts": {
-    "start-all": "concurrently \"cd backend && npm start\" \"cd frontend && npm run serve\""
+    "primevue": "^4.2.3"
   }
 }
