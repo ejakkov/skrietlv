@@ -5,6 +5,7 @@ import Product from '../views/Product/Product.vue';
 import Cart from '../views/Cart/Cart.vue';
 import Profile from '../views/Profile/Profile.vue';
 import Likes from '../views/Likes/Likes.vue';
+import AuthorizationPage from '../views/AuthorizationPage/AuthorizationPage.vue';
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
@@ -12,7 +13,8 @@ const routes = [
   { path: '/product/:id', name: 'Product', component: Product },
   { path: '/cart', name: 'Cart', component: Cart },
   { path: '/profile', name: 'Profile', component: Profile },
-  { path: '/likes', name: 'Likes', component: Likes }
+  { path: '/likes', name: 'Likes', component: Likes },
+  { path: '/login', name: 'Login', component: AuthorizationPage }
 ];
 
 const router = createRouter({
