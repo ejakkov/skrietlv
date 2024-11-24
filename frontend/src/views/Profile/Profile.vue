@@ -27,13 +27,22 @@
     data() {
       return {
         user: {
-          name: "Andris Labietis" 
+          name: "" 
         },
         orders: [
 
         ]
       };
+    },
+    mounted() {
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    if (loggedInUser) {
+      this.user.name = JSON.parse(loggedInUser);
+    } else {
+      // Redirect to login if no user is logged in
+      this.$router.push('/login');
     }
+  }
   };
   </script>
   

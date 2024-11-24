@@ -54,7 +54,14 @@ export default {
       }
     },
     goToProfile() {
-      this.$router.push({ name: 'Profile' });
+      const loggedInUser = localStorage.getItem('loggedInUser');
+      if (loggedInUser) {
+        // User is logged in, redirect to profile
+        this.$router.push('/profile');
+      } else {
+        // User is not logged in, redirect to login
+        this.$router.push('/login');
+      }
     },
     goToHome() {
       if (window.scrollY === 0) {
