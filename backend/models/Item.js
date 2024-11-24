@@ -8,8 +8,8 @@ const itemSchema = new mongoose.Schema({
   imageUrl: String,
   category: String,
   brand: String,
-  size: String,
-  color: String,
+  sizes: {},
+  colors: {},
   material: String,
   createdAt: { type: Date, default: Date.now }
 });

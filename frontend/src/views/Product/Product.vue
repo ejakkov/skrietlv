@@ -1,37 +1,55 @@
 <template>
-    <div v-if="product">
-      <h1>{{ product.name }}</h1>
-      <img :src="product.imageUrl" alt="Product image" />
-      <p>{{ product.description }}</p>
-      <p>Price: {{ product.price }}</p>
-      <button @click="addToCart">Add to Cart</button>
+    
+    <div v-if="loading">
+      <p>Loading product...</p>
     </div>
-    <div v-else>
-      <p>Loading product details...</p>
+
+    <div v-else class="product-container">
+      <div v-for="item in product">
+        <div class="product-image">
+          <img :src="item.imageUrl" />
+        </div>
+        <div class="product-info">
+          <h1>{{ item.name }}</h1>
+          <div>
+            <span class='category'>{{ item.category }}</span>
+          </div>
+          <div class='price'>
+            <span style='font-size: 16pt'>€</span><span style='font-size: 36pt'>{{ item.price }}</span>
+          </div>
+          <div class='selection'>
+            <div style="float: left; margin: 10px;">
+              <div>
+                <span>Izmērs</span>
+              </div>
+              <div>
+                <button v-for="size in item.sizes">{{ size.size }}</button>
+              </div>
+            </div>
+            <div style="float: left; margin: 10px;">
+              <div>
+                <span>Krāsa</span>
+              </div>
+              <div>
+                <button v-for="color in item.colors" :style="{background: color.code}"></button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button class='add-to-cart'>Pievienot grozam</button>
+          </div>
+          <div class='description'>
+            <div>
+              <b>Apraksts</b><button id='description-toggle' v-on:click='descriptionToggle()'><span class='pi pi-angle-up'></span></button>
+            </div>
+            <div data-open='1' id='description-collapse'>
+              {{ item.description }}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </template>
   
-  <script>
-  import axios from 'axios';
-  
-  export default {
-    data() {
-      return {
-        product: null
-      };
-    },
-    async created() {
-      try {
-        const response = await axios.get(`http://localhost:5000/api/items/${this.$route.params.id}`);
-        this.product = response.data;
-      } catch (error) {
-        console.error('Error fetching product:', error);
-      }
-    },
-    methods: {
-      addToCart() {
-        console.log(`${this.product.name} added to cart`);
-      }
-    }
-  };
-  </script>
+  <style src="./Product.css"></style>
+  <script src="./Product.js"></script>
