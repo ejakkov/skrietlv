@@ -7,7 +7,8 @@
     "express": "^4.21.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.7.3",
-    "primeicons": "^7.0.0"
+    "primeicons": "^7.0.0",
+    "yup": "^1.4.0"
   },
   "scripts": {
     "start-all": "concurrently \"cd backend && npm start\" \"cd frontend && npm run serve\""
