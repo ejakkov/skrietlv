@@ -31,7 +31,7 @@ export default {
   name: "Navbar",
   data() {
     return {
-      isDropdownVisible: false, // track dropdown visibility
+      isDropdownVisible: false, 
       notifications: [
         "New sale on summer collection!",
         "Your order #1234 has been shipped",
@@ -74,6 +74,7 @@ export default {
           this.$router.push({ name: 'Home' });
         }
       } else {
+      if (this.$route.name === 'Home') {
         window.scrollTo({
           top: 0,
           behavior: 'smooth',
@@ -95,7 +96,9 @@ export default {
 @import 'primeicons/primeicons.css';
 
 .navbar {
-  position: fixed;
+  position: sticky;
+  top: 0;
+  left: 0;
   width: 100%;
   background-color: #a8d5a1;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); 
@@ -103,6 +106,7 @@ export default {
   margin-right: 0px;
   display: flex;
   justify-content: center;
+  z-index: 1000; 
   z-index: 1000; 
   font-family: "Oswald", sans-serif;
   font-weight: 700;

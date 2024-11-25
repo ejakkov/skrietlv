@@ -6,7 +6,7 @@ const Order = require('../models/Order');
 
 dotenv.config();
 
-// Connect to MongoDB
+
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -14,7 +14,6 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('Connection error', err));
 
-// Sample data
 const users = [
   { name: 'Test User', email: 'test@example.com', password: '123456', isAdmin: false },
   { name: 'Admin User', email: 'admin@example.com', password: 'adminpass', isAdmin: true }
@@ -36,32 +35,26 @@ const orders = [
   { user: null, items: [], totalAmount: 89.98, shippingAddress: '123 Main St, Anytown, AT 12345', status: 'Completed' }
 ];
 
-// Seed function
 const seedData = async () => {
   try {
-    // Clear existing data
     await User.deleteMany();
     await Item.deleteMany();
     await Order.deleteMany();
 
     console.log('Existing data deleted');
 
-    // Insert users
     const createdUsers = await User.insertMany(users);
     console.log('Users added:', createdUsers);
 
-    // Associate orders with a user and items
     orders[0].user = createdUsers[0]._id;
     orders[0].items = [
       { item: createdUsers[0]._id, quantity: 1 },
       { item: createdUsers[1]._id, quantity: 2 }
     ];
 
-    // Insert items
     const createdItems = await Item.insertMany(items);
     console.log('Items added:', createdItems);
 
-    // Insert orders
     const createdOrders = await Order.insertMany(orders);
     console.log('Orders added:', createdOrders);
 
@@ -73,5 +66,4 @@ const seedData = async () => {
   }
 };
 
-// Run the seed function
 seedData();

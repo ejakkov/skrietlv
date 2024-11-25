@@ -1,0 +1,115 @@
+validation-page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.validation-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.delivery-options {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.option {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 5px;
+  flex: 1;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.option.active {
+  background-color: #78c78d;
+  color: white;
+}
+
+.pakomats-selection, .recipient-details, .delivery-address {
+  margin-bottom: 20px;
+}
+
+.pakomats-selection .provider {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.pakomats-selection .provider img {
+  width: 100px;
+  cursor: pointer;
+}
+
+.provider img.selected { 
+  border: 4px solid #78c78d; 
+}
+
+.selected-pakomats {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; 
+}
+
+.error {
+  border-color: red;
+}
+
+.order-summary {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.summary-item.total {
+  font-weight: bold;
+}
+
+.bottom-right-box a { 
+  display: inline-block; 
+  padding: 10px 20px; 
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 150px;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  margin: 0 auto; 
+}
+
+.bottom-right-box a.disabled { 
+  opacity: 0.5; 
+  pointer-events: none; 
+}
+
+.bottom-right-box a img {
+  width: 150px;  
+}
+
+.bottom-right-box p {
+  margin-bottom: 10px; 
+}

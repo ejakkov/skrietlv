@@ -39,10 +39,11 @@
       </div>      
     </div>
 
+
+
   </div>
   <Footer />
 </template>
 
-<script src="./Catalog.js"></script>
+<script src="./Catalog.js"></script> 
 <style src="./Catalog.css"></style>
-    

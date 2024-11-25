@@ -1,0 +1,118 @@
+.validation-page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.validation-container {
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+}
+
+.left-column {
+  width: 50%; 
+  margin-right: 20px;
+}
+
+.right-column {
+  width: 50%; 
+}
+
+.delivery-options {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.option {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  background-color: #f2f2f2; 
+  border-radius: 5px;
+}
+
+.option + .option {
+  margin-left: 10px;
+}
+
+.option.active {
+  background-color: #78c78d;
+  color: white;
+}
+
+.pakomats-selection, .recipient-details, .delivery-address {
+  margin-bottom: 20px;
+}
+
+.pakomats-selection .provider {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.pakomats-selection .provider img {
+  width: 100px;
+  cursor: pointer;
+}
+
+.selected-pakomats {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.error {
+  border-color: red;
+}
+
+.order-summary {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.summary-item.total {
+  font-weight: bold;
+}
+
+button {
+  background-color: #78c78d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.trustly-logo {
+  display: inline-block;
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+

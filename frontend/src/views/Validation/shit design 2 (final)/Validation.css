@@ -1,0 +1,150 @@
+.validation-page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.validation-container {
+  max-width: 900px;
+  margin: 30px auto; 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr auto auto; 
+  gap: 15px 30px; 
+  padding: 5px; 
+  position: relative; 
+}
+
+.left-box, 
+.right-box, 
+.bottom-left-box, 
+.bottom-right-box {
+  background-color: #FFCCBC; 
+  padding: 25px; 
+}
+
+.validation-container::before { 
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(62%); 
+  background-color: #FFCCBC; 
+  z-index: -1; 
+}
+
+.left-box h3, 
+.right-box h3 {
+  text-align: center; 
+}
+
+.left-box {
+  grid-column: 1; 
+  grid-row: 1; 
+}
+
+.right-box {
+  grid-column: 2; 
+  grid-row: 1; 
+  border-left: 1px solid whitesmoke; 
+}
+
+.bottom-left-box {
+  grid-column: 1; 
+  grid-row: 2; 
+}
+
+.bottom-right-box {
+  grid-column: 2; 
+  grid-row: 2 / span 1; 
+  text-align: center; 
+}
+
+.bottom-right-box p {
+  margin-bottom: 15px; 
+}
+
+.provider {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.provider img {
+  width: 100px; 
+  cursor: pointer;
+}
+
+.provider img.selected {
+  border: 2px solid red; 
+}
+
+.user-details {
+  margin-top: 20px;
+}
+
+.user-name {
+  font-size: 18px; 
+  font-weight: bold;
+}
+
+.user-phone {
+  font-size: 14px; 
+  opacity: 0.7; 
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input:disabled {
+  background-color: #f2f2f2; 
+  color: #999; 
+  cursor: not-allowed; 
+}
+
+.error {
+  border-color: red;
+}
+
+.order-summary {
+  margin-top: 20px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.summary-item.total {
+  font-weight: bold;
+  font-size: 18px; 
+}
+
+.bottom-right-box a { 
+  display: inline-block; 
+  padding: 10px 20px; 
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.bottom-right-box a.disabled { 
+  opacity: 0.5; 
+  pointer-events: none; 
+}
+
+.bottom-right-box a img {
+  width: 150px;  
+}

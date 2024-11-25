@@ -1,4 +1,3 @@
-import axios from 'axios';
 import Footer from "../../components/Footer.vue";
 import SubNavBar from "@/components/SubNavbar.vue";
 import Select from 'primevue/select';
@@ -32,16 +31,25 @@ export default {
       ]
     };
   },
-  created() {
-    this.fetchItems();
+  async created() {
+    console.log("Component created");
+    await this.fetchItems();
   },
   methods: {
     async fetchItems() {
       try {
-        const response = await axios.get('http://localhost:5000/api/items');
-        this.items = response.data;
+        const response = await fetch("http://localhost:5000/api/items"); // Fetch from Express API
+        if (!response.ok) {
+          throw new Error("Failed to fetch items");
+        }
+        const data = await response.json();
+        this.items = data;
+        console.log(data)
+        console.log("Fetched items:", this.items);
       } catch (error) {
-        console.error('Error fetching items:', error);
+        console.error("Error fetching items:", error);
+      } finally {
+        this.loading = false;
       }
     },
 

@@ -2,6 +2,7 @@
     <div>
       <h1>Profile</h1>
       <p>Welcome, {{ user.name }}</p>
+      <p>Phone nr, {{ user.phone }}</p>
       <h2>Your Orders</h2>
       <div v-if="orders.length > 0">
         <div v-for="order in orders" :key="order._id" class="order">
@@ -27,7 +28,8 @@
     data() {
       return {
         user: {
-          name: "" 
+          name: "Andris Labietis" ,
+          phone: "+371 99999999"
         },
         orders: [
 

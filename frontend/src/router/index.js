@@ -4,6 +4,10 @@ import Catalog from '../views/Catalog/Catalog.vue';
 import Product from '../views/Product/Product.vue';
 import Cart from '../views/Cart/Cart.vue';
 import Profile from '../views/Profile/Profile.vue';
+import checkout from '../views/Checkout/checkout.vue';
+import Validation from '../views/Validation/Validation.vue';
+
+
 import Likes from '../views/Likes/Likes.vue';
 import AuthorizationPage from '../views/AuthorizationPage/AuthorizationPage.vue';
 
@@ -15,6 +19,11 @@ const routes = [
   { path: '/profile', name: 'Profile', component: Profile },
   { path: '/likes', name: 'Likes', component: Likes },
   { path: '/login', name: 'Login', component: AuthorizationPage }
+  { path: '/profile', name: 'Profile', component: Profile },
+  { path: '/checkout', name: 'checkout', component: checkout },
+  { path: '/Validation', name: 'Validation', component: Validation },
+
+
 ];
 
 const router = createRouter({

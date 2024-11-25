@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
+import server from './serv.js'
 import PrimeVue from "primevue/config";
 import Button from "primevue/button";
 import Noir from './presets/Noir.js';
